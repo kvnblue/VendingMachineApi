@@ -1,6 +1,9 @@
 language: java
 jdk: oraclejdk8
 
+branches:
+  only:
+    - vending-machine-api
 script:
   - ./mvnw clean install -B
 before_install:
