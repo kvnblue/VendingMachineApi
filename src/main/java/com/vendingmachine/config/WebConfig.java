@@ -20,6 +20,7 @@ import com.vendingmachine.constants.VmApiRestEndpoints;
 public class WebConfig implements WebMvcConfigurer {
 
 	private static final String LOCAL_HOST = "http://localhost:4200";
+	private static final String HEROKU = "https://vending-machine-app.herokuapp.com";
 
 	/*
 	 * (non-Javadoc)
@@ -31,8 +32,8 @@ public class WebConfig implements WebMvcConfigurer {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping(VmApiRestEndpoints.VM_API + VmApiRestEndpoints.PRODUCT_CATEGORIES)
-				.allowedOrigins(LOCAL_HOST).allowedMethods("GET");
+				.allowedOrigins(LOCAL_HOST,HEROKU).allowedMethods("GET");
 		registry.addMapping(VmApiRestEndpoints.VM_API + VmApiRestEndpoints.PRODUCT_PURCHASE_REQUEST)
-				.allowedOrigins(LOCAL_HOST);
+				.allowedOrigins(LOCAL_HOST,HEROKU);
 	}
 }
