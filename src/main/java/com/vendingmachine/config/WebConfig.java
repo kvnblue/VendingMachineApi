@@ -20,7 +20,7 @@ import com.vendingmachine.constants.VmApiRestEndpoints;
 public class WebConfig implements WebMvcConfigurer {
 
 	private static final String LOCAL_HOST = "http://localhost:4200";
-	private static final String HEROKU = "https://vending-machine-app.herokuapp.com";
+	private static final String HEROKU = "https://vending-machine-application.herokuapp.com";
 
 	/*
 	 * (non-Javadoc)
