@@ -4,3 +4,8 @@ script:
   - ./mvnw clean install -B
 before_install:
   - chmod +x mvnw
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api-key: $HEROKU_API_KEY
+  app: vending-machine-api
